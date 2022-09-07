@@ -1,40 +1,10 @@
-#import winreg
+### Find files specifics
 
-                       #registry = winreg.ConnectRegistry(socket.gethostname(), winreg.HKEY_LOCAL_MACHINE)
-                      #winreg.OpenKey(registry, "SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon")
-
-                      #path = winreg.OpenKey(registry, "SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon")
-
-
-# Python program to explain os.path.exists() method
-
-# importing os module
 import os
+import glob
 
-# Specify path
-path = '/usr/local/bin/'
+os.chdir('D:\Work_Folder')
+files = glob.glob('*.txt')
 
-# Check whether the specified
-# path exists or not
-isExist = os.path.exists(path)
-print(isExist)
-
-# Specify path
-path = '/backup/TEST.txt'
-
-# Check whether the specified
-# path exists or not
-isExist = os.path.exists(path)
-print(isExist)
-
-
-
-
-
-
-
-
-
-
-
+print(files)
 
